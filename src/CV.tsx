@@ -1,101 +1,65 @@
 import { ReactElement, useState } from "react"
 import "./CV.css"
-import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon } from "@heroicons/react/24/solid"
+import { ChevronDoubleLeftIcon } from "@heroicons/react/24/solid"
 
 function CV() {
   const [selectedSkill, setSelectedSkill] = useState<number>(0)
-  const [selectedWork, setSelectedWork] = useState<number>(0)
 
   return (
     <div className="cv-container">
-      <div className="cv-section">
-        <div className="cv-section-title" >
-          Skills
+      <div className="cv-about">
+        <h1 className="cv-section-title">Get to know me!</h1>
+        <p>
+        I am a very analytical person with an affinity for math and problem solving. 
+        I love all things music, and have been a musician from a young age. 
+        </p>
+        <p>
+          I completed a BSc in Electronics Engineering in 2017, briefly worked as an electronics engineering assistant and then returned to my passion for music, working as a performing and recording instrumentalist, soundtrack writer, producer, and audio engineer. 
+        </p>
+        <p>
+          In 2023, I picked up some freelance data analyst work (mostly creating royalties reports for musicians). 
+          I developed some basic Python skills through this work and moved on to working as a data annotator for a US based company, Data Annotation. 
+          This work involves rating and correcting AI chatbots on a range of data science and math topics including Python programming, which has really helped develop my coding skills. 
+        </p>
+        <p>
+          In August 2024, I studied full stack web development at Dev Academy Aotearoa. This course provided invaluable opportunities for group and pair coding work, with a focus on Javascript/Typescript and the React framework.
+        </p>
+        
+        <div className="cv-download-button">
+          <a href="Tyaan Tech CV Dec 2024.pdf" download="Tyaan Tech CV Dec 2024.pdf">
+            <button>Download Full CV</ button>
+          </a>
         </div>
-        <div className="item-details">
+       
+      </div>
+
+      <div className="cv-skills">
+
+        <h1 className="cv-section-title">
+          Skills
+        </h1>
+
+        <div className="skill-list">
+          {skills.map((s, idx) => (
+            <button
+              key={s.title + idx}
+              onClick={() => setSelectedSkill(idx)}
+              className={selectedSkill == idx ? 'selected-button' : ''}
+            >
+              {s.title}
+            </button>
+          ))}
+        </div>
+          
+
+        <div className="skill-details">
           <p>
           {skills[selectedSkill].details}
           </p>
         </div>
-        <ul className="item-list right-align">
-          {skills.map((s, idx) => (
-            <li key={s.title + idx}>
-              <button
-                onClick={() => setSelectedSkill(idx)}
-                style={{
-                  fontSize: selectedSkill == idx ? '19px' : '',
-                  fontWeight: selectedSkill == idx ? 'bold' : ''
-                }}
-              >
-                {<ChevronDoubleLeftIcon className="chevron" style={{opacity: selectedSkill==idx ? 1: 0}}/>}
-                {s.title}
-              </button>
-            </li>
-          ))}
-        </ul>
-
-      </div>
-      <div className="cv-section">
-        <ul className="item-list left-align">
-            {work_history.map((w, idx) => (
-              <li key={w.position + idx}>
-                <button
-                  onClick={() => setSelectedWork(idx)}
-                  style={{
-                    fontSize: selectedWork == idx ? '19px' : '',
-                    fontWeight: selectedWork == idx ? 'bold' : ''
-                  }}
-                >
-                  {w.position}
-                  {<ChevronDoubleRightIcon className="chevron" style={{opacity: selectedWork==idx ? 1: 0}}/>}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <div className="item-details right-align">
-            <h3>{work_history[selectedWork].employer}</h3>
-            <h4 style={{opacity: 0.5}}>{work_history[selectedWork].dates}</h4>
-            <ul>
-              {work_history[selectedWork].tasks.map((t, idx) => (
-                <li key={t + idx}>
-                  {t + ' ▪'}
-                </li>
-              ))}
-            </ul>
-          </div>
-          {/* <div className="cv-section-title">
-            Work History
-          </div> */}
-      </div>
-      {/* <div className="cv-work">
-
-        {work_history.map((w, idx) => (
-          <div key={w.position + idx} className="cv-item work-item">
-            <h4>
-              {w.position}
-            </h4>
-            <p>
-              {w.employer}
-            </p>
-            <p>
-              {w.dates}
-            </p>
-            <ul>
-              {w.tasks.map((t, idx) => (
-                <li key={t + idx}>
-                  {t}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div> */}
-      {/* <div className="cv-education">
         
-        {education.map((e, idx) => (
-          
-        ))}
-      </div> */}
+      </div>
+     
     </div>
   )
 }

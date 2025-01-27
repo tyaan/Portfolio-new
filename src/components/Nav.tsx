@@ -25,10 +25,10 @@ function Nav() {
   };
 
   return (
+    <>
     <nav className="nav" 
       style={{ 
-        opacity,
-        
+        opacity
       }}
     >
       <div className="nav-icon">
@@ -36,11 +36,12 @@ function Nav() {
         <div className="white-square-img"></div>
         <img
           className="navbar-revealed-text"
-          src="../../public/images/revealed-text.png"
+          src="/images/revealed-text.png"
           alt="White square"
         />
       </div>
-      <ul className="menu">
+    </nav>
+    <ul className="menu">
       <li>
           <button onClick={() => scrollToSection('hi')}>Hi!</button>
         </li>
@@ -51,7 +52,7 @@ function Nav() {
           <button onClick={() => scrollToSection('projects')}>Projects</button>
         </li>
       </ul>
-    </nav>
+    </>
   );
 }
 

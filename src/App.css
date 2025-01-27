@@ -1,13 +1,38 @@
 /* Styles for each section */
 .section {
-  min-height: 100vh; /* Ensures the section is at least the full height of the viewport */
+  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
   /* border-bottom: 5px solid #ccc; */
+  /* border: 1px solid black; */
+}
+
+#hi {
+  min-height: 100vh;
+}
+
+#about {
+  min-height: 50vh;
+  /* border: 1px solid green; */
+}
+
+#projects {
+  min-height: 100vh;
 }
 
 .about-text {
   width: 75%;
+  text-align: center;
+}
+
+.color-bar {
+  position: absolute;
+  z-index: -10;
+  background: var(--ternary-color);
+  height: 200px;
+  width: 70vw;
+  top: calc(50% - 90px);
+  left: calc(50% - 35vw);
 }

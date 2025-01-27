@@ -4,6 +4,7 @@ function ProjectDetails({project}: {project: Project}) {
   return (
     <>
       <div className="project-details-section-1">
+        <img src={project.imgURL} className="project-img"/>
         <div className="project-overview">
           <h1>
             {project.title}
