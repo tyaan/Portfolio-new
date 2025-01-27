@@ -1,0 +1,13 @@
+/* Styles for each section */
+.section {
+  min-height: 100vh; /* Ensures the section is at least the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  /* border-bottom: 5px solid #ccc; */
+}
+
+.about-text {
+  width: 75%;
+}
