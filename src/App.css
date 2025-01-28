@@ -28,11 +28,12 @@
 }
 
 .color-bar {
-  position: absolute;
+  position: fixed;
   z-index: -10;
   background: var(--ternary-color);
   height: 200px;
   width: 70vw;
   top: calc(50% - 90px);
   left: calc(50% - 35vw);
+  /* filter: drop-shadow(20px 30px 50px var(--ternary-color)); */
 }
