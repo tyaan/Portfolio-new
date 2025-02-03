@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../Nav.css';
 
 function Nav() {
@@ -19,9 +19,9 @@ function Nav() {
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
+  const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth' });
+    section?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -30,17 +30,7 @@ function Nav() {
       style={{ 
         opacity
       }}
-    >
-      <div className="nav-icon">
-        <div className="black-square-img"></div>
-        <div className="white-square-img"></div>
-        <img
-          className="navbar-revealed-text"
-          src="/images/revealed-text.png"
-          alt="White square"
-        />
-      </div>
-    </nav>
+    />
     <ul className="menu">
       <li>
           <button onClick={() => scrollToSection('hi')}>Hi!</button>

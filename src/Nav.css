@@ -28,68 +28,6 @@
   }
 }
 
-/* BLACK SQUARE ANIMATION */
-
-.nav-icon {
-  position: relative;
-  width: 50%;
-  height: 50px;
-}
-
-.black-square-img {
-  position: absolute;
-  width: 50px;
-  top: 50%;
-  height: 50px;
-  transform: translateY(-50%); 
-  left: 5%; 
-  transition: left 15s linear;
-  z-index: 950;
-  background-color: black;
-  opacity: 1.0;
-}
-
-.white-square-img {
-  position: relative;
-  width: 95%;
-  top: 50%;
-  height: 50px;
-  transform: translateY(-50%); 
-  left: 5%; 
-  transition: left 15s linear, width 15s linear;
-  z-index: 900;
-  background-color: white;
-}
-
-.nav-icon:hover .black-square-img {
-  left: calc(100% - 50px);  
-}
-
-.nav-icon:hover .white-square-img {
-  left: 100%;  
-  width: 0%;
-}
-
-.nav-icon:not(:hover) .black-square-img {
-  transition: left 1s linear;
-}
-
-.nav-icon:not(:hover) .white-square-img {
-  transition: left 1s linear, width 1s linear;;
-}
-
-.navbar-revealed-text {
-  position: absolute;
-  left: 5%;
-  width: calc(95% - 50px);
-  top: 50%;
-  height: 50px;
-  transform: translateY(-50%); 
-  font-size: 24px; 
-  font-family: Impact;
-  letter-spacing: 10px;
-}
-
 /* MENU */
 
 .menu {
