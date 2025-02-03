@@ -21,11 +21,3 @@ body {
   background-color: var(--white-color);
   color: black;
 }
-
-.left-align {
-  text-align: left;
-}
-
-.right-align {
-  text-align: right;
-}
