@@ -11,7 +11,9 @@ function Projects(){
   return (
     <div className="projects-container">
 
-      <ul className="project-list">
+      <div className="projects-inner-container">
+
+        <ul className="project-list">
 
         {projects.map((p, idx) => (
           <button
@@ -23,9 +25,36 @@ function Projects(){
             {<ChevronDoubleRightIcon className="chevron-right" style={{opacity: selectedProject==idx?1:0}}/>}
           </button>
         ))}
-      </ul>
+        
+        </ul>
 
-      <ProjectDetails project={projects[selectedProject]} />
+        <ProjectDetails project={projects[selectedProject]} />
+
+      </div>
+
+      <div className="project-buttons-container">
+
+        <div className="project-button">
+          <a
+            href={projects[selectedProject].siteURL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button >Visit Deployed Site</button>
+          </a>
+        </div>
+        
+        <div className="project-button">
+          <a
+            href={projects[selectedProject].githubURL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-github-link"
+          >
+            <button >View Project Github</button>
+          </a>
+        </div>
+      </div>
 
     </div>
   )

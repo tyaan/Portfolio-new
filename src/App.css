@@ -10,12 +10,12 @@
 }
 
 #about {
-  min-height: 50vh;
+  min-height: 100vh;
   background: rgb(255, 255, 255);
 }
 
 #projects {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .about-text {

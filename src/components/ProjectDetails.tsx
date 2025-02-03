@@ -25,30 +25,6 @@ function ProjectDetails({project}: {project: Project}) {
         {project.details}
       </div>
 
-      <div className="project-details-section-3">
-
-        <div className="project-button">
-          <a
-            href={project.siteURL}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button >Visit Deployed Site</button>
-          </a>
-        </div>
-        
-        <div className="project-button">
-          <a
-            href={project.githubURL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-github-link"
-          >
-            <button >View Project Github</button>
-          </a>
-        </div>
-      </div>
-
     </ div>
   )
 }

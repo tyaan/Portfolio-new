@@ -1,6 +1,6 @@
 .projects-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 90%;
   height: 100%;
   align-items: center;
@@ -8,6 +8,21 @@
 }
 
 /* projects-container children */
+
+.projects-inner-container {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+}
+
+.project-buttons-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+/* projects-inner-container children */
 
 .project-list {
   flex: 1;
@@ -24,9 +39,47 @@
 .project-details {
   flex: 2;
   padding: 20px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   font-size: medium;
+  align-items: center;
+  justify-content: center;
+}
+
+/* project-buttons-container children */
+
+.project-button {
+  display: flex;        
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;    
+}
+
+.project-button a {
+  display: flex;    
+  justify-content: center; 
+  align-items: center;
+  width: 100%;     
+  text-decoration: none; 
+}
+
+.project-button button {
+  height: 80px;
+  width: 90%;      
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 22px;
+  border-radius: 10px;
+  transition: font-size 0.3s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
+  cursor: pointer;    
+}
+
+.project-button button:hover {
+  font-size: 24px;
+  height: 75px;
+  width: 85%
 }
 
 /* project-list children */
@@ -66,12 +119,6 @@
   padding: 20px;
 }
 
-.project-details-section-3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-}
-
 /* project-details-section-1 children */
 
 .project-img {
@@ -92,39 +139,4 @@
 
 .project-details-section-1 h3 {
   font-size: large;
-}
-
-/* project-details-section-3 children */
-
-.project-button {
-  display: flex;        
-  justify-content: center; 
-  align-items: center; 
-  width: 100%;    
-}
-
-.project-button a {
-  display: flex;    
-  justify-content: center; 
-  align-items: center;
-  width: 100%;     
-  text-decoration: none; 
-}
-
-.project-button button {
-  height: 80px;
-  width: 90%;      
-  border: none;
-  background-color: var(--secondary-color);
-  color: white;
-  font-size: 22px;
-  border-radius: 10px;
-  transition: font-size 0.3s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
-  cursor: pointer;    
-}
-
-.project-button button:hover {
-  font-size: 24px;
-  height: 75px;
-  width: 85%
 }
