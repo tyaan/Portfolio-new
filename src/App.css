@@ -7,6 +7,29 @@
 
 #hi {
   min-height: 100vh;
+  flex-direction: column;
+}
+
+.hi-text {
+  width: 75%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.icons {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.icon {
+  padding: 0 50px;
+  color: black; 
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: var(--primary-color);
 }
 
 #about {
@@ -18,17 +41,4 @@
   height: 100vh;
 }
 
-.about-text {
-  width: 75%;
-  text-align: center;
-}
 
-.color-bar {
-  position: fixed;
-  z-index: -10;
-  background: var(--tertiary-color);
-  height: 200px;
-  width: 70vw;
-  top: calc(50% - 90px);
-  left: calc(50% - 35vw);
-}

@@ -67,30 +67,6 @@ function CV() {
 
 export default CV
 
-interface Education {
-  school: string
-  dates: string
-  details: string
-}
-
-const education: Education[] = [
-  {
-    school: "Dev Academy Aotearoa",
-    dates: "Aug - Dec 2024",
-    details: "Full Stack Web Development"
-  },
-  {
-    school: "Victoria University of Wellington",
-    dates: "2018", 
-    details: "Graduate Diploma in Music Composition"
-  },
-  {
-    school: "Victoria University of Wellington", 
-    dates: "2015 - 2017",
-    details: "Bachelor of Science in Electronics and Computer Systems Engineering"
-  }
-]
-
 interface Skill {
   title: string,
   details: ReactElement
@@ -150,64 +126,4 @@ const skills: Skill[] = [
     </>
   }
 
-]
-
-interface Work {
-  position: string, 
-  employer: string, 
-  dates: string, 
-  tasks: string[]
-}
-
-const work_history: Work[] = [
-  {
-    position: "Data Annotator", 
-    employer: "Data Annotation", 
-    dates: "March 2024 - Present", 
-    tasks: [
-      'Writing, rating and editing responses from AI assistants',
-      'Topics include Python, Math, Statistics, Data Analysis and Machine Learning'
-    ]
-  }, 
-  {
-    position: "Data Reporting Analyst", 
-    employer: "Self Employed", 
-    dates: "July 2023 - Present", 
-    tasks: [
-      "Cleaning data", 
-      "Visualising Data", 
-      "Creating reports and dashboards"
-    ]
-  }, 
-  {
-    position: "Musician", 
-    employer: "Self Employed", 
-    dates: "2014 - Present", 
-    tasks: [
-      "Organising and performing shows", 
-      "Musical director", 
-      "Session musicain, recording and performing", 
-      "Music producing for artists and for film", 
-      "Audio engineering", 
-      "Teaching"
-    ]
-  }, 
-  {
-    position: "Bicycle Assistant", 
-    employer: "Donkey Republic Berlin", 
-    dates: "March 2019 - September 2019", 
-    tasks: [
-      "Collecting and moving misplaced bikes"
-    ]
-  }, 
-  {
-    position: "Electronics Engineering Assistant", 
-    employer: "Vanguard Electronics Wellington", 
-    dates: "May 2017 - January 2018", 
-    tasks: [
-      "Design and analysis of analog and digital circuits", 
-      "Soldering", 
-      "Micro-controller programming"
-    ]
-  }
 ]
