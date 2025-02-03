@@ -17,23 +17,11 @@
   opacity: 0.5;
 }
 
-.nav:hover {
-  opacity: 1;
-}
-
-@media (max-width: 768px){
-  .nav {
-    flex-direction: column;
-    height: 150px;
-  }
-}
-
 /* MENU */
 
 .menu {
   background: none;
   position: fixed;
-  flex: 3;
   display: flex;
   list-style-type: none;
   top: 0;
@@ -70,22 +58,9 @@
   color: var(--primary-color)
 }
 
-@media (max-width: 1024px) {
-  .menu button {
-    background: none;
-    font-size: 17px;
-    cursor: pointer;
-    width: 90%; 
-    height: 90%;
-    border: none;
-    text-align: center;
-    transition: font-size 0.5s ease-in-out, width 0.3s ease-in-out, height 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
-
-  .menu button:hover {
-    font-size: 19px;
-    width: 85%;
-    height: 85%;
-    color: var(--primary-color)
+@media (max-width: 768px) {
+  .menu {
+    left: 0;
+    width: 100%;
   }
 }
