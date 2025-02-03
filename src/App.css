@@ -1,12 +1,8 @@
-/* Styles for each section */
 .section {
-  /* min-height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  /* border-bottom: 5px solid #ccc; */
-  /* border: 1px solid black; */
 }
 
 #hi {
@@ -15,7 +11,7 @@
 
 #about {
   min-height: 50vh;
-  /* border: 1px solid green; */
+  background: rgb(255, 255, 255);
 }
 
 #projects {
@@ -30,10 +26,9 @@
 .color-bar {
   position: fixed;
   z-index: -10;
-  background: var(--ternary-color);
+  background: var(--tertiary-color);
   height: 200px;
   width: 70vw;
   top: calc(50% - 90px);
   left: calc(50% - 35vw);
-  /* filter: drop-shadow(20px 30px 50px var(--ternary-color)); */
 }

@@ -1,116 +1,82 @@
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+  padding: 80px 0 20px 0;
+  width: 20%;
+}
+
+.blue-line{
+  height: 8px;
+  width: 200px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
 .cv-container {
-  width: 100%;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: top;
-  margin: 50px 50px 50px 20px;
-  /* border: 1px solid black; */
 }
 
-/* ABOUT */
+.cv-container h1 {
+  font-size: x-large;
+}
+
+/* cv-container children */
 
 .cv-about {
   flex: 1;
-  font-size: 17px;
   display: flex;
   flex-direction: column;
-  justify-content: top;
-  align-items: center;
-}
-
-.cv-about p {
-  padding: 0 3% 0 3%;
-}
-
-.cv-about h1 {
-  text-align: center;
-}
-
-.cv-download-button {
-  display: flex;    
-  justify-content: center; 
-  align-items: center;
-  width: 100%;   
-  height: 100px;
-  text-decoration: none; 
-}
-
-.cv-download-button a {
-  display: flex;    
-  justify-content: center; 
-  align-items: center;
-  width: 100%;     
-  text-decoration: none; 
-}
-
-.cv-download-button button {
-  height: 100px;
-  width: 80%;      
-  border: none;
-  background-color: var(--secondary-color);
-  color: white;
-  font-size: 22px;
-  border-radius: 10px;
-  transition: font-size 0.3s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
-  cursor: pointer;   
-  margin-top: 30px; 
-}
-
-.cv-about button:hover {
-  font-size: 24px;
-  height: 95px;
-  width: 78%
-}
-
-/* SKILLS */
-
-.cv-skills {
-  flex: 1;
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cv-section-title {
-  text-align: center;
-  flex: 1;
-  font-size: 50px;
-  /* position: relative; */
-  color: black;
-  /* transform: translateY(40%); */
-}
-
-.chevron {
-  height: 40px;
-  transform: translateY(35%); 
-}
-
-.skill-list {
-  flex: 2;
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: left;
+  font-size: medium;
   padding: 20px;
 }
 
-.skill-list li {
-  margin: 5px 0; 
+.cv-skills {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
+  padding: 20px;
 }
 
+/* cv-skills children */
+
+.skill-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill-details {
+  display: flex;
+}
+
+/* skill-list children */
+
 .skill-list button {
-  /* background: rgb(168, 168, 168); */
-  height: 50px;
-  margin: 3px;
-  font-size: 20px;
-  border: 2px solid var(--primary-color);
+  background: rgb(231, 231, 231);
+  height: 40px;
+  margin: 0 10px 10px 0;
+  font-size: medium;
+  color: rgb(79, 79, 79);
+  font-weight: 700;
+  border: 0px;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
   transition: color 0.3s ease-in-out;
   text-align: left;
+  padding: 0 20px 0 20px;
 }
 
 .skill-list button:hover {
@@ -126,16 +92,43 @@
   color: white;
 }
 
-.skill-details {
-  flex: 2;
-  padding: 30px 10% 0 10%;
-  font-size: 17px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: top; 
+/* cv-download button */
+
+.cv-download-button {
+  display: flex;    
+  justify-content: center; 
+  align-items: center;
+  width: 40%;   
+  height: 80px;
+  text-decoration: none; 
+  padding: 0 0 50px 0;
 }
 
-.skill-details li {
-  list-style-type: none;
+.cv-download-button a {
+  display: flex;    
+  justify-content: center; 
+  align-items: center;
+  width: 100%;     
+  text-decoration: none; 
 }
+
+.cv-download-button button {
+  height: 80px;
+  width: 90%;      
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: font-size 0.3s ease-in-out, height 0.1s ease-in-out, width 0.1s ease-in-out;
+  cursor: pointer;   
+  margin-top: 30px;
+}
+
+.cv-download-button button:hover {
+  font-size: 24px;
+  height: 75px;
+  width: 85%
+} 
+

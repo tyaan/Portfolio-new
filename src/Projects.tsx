@@ -10,25 +10,23 @@ function Projects(){
 
   return (
     <div className="projects-container">
+
       <ul className="project-list">
+
         {projects.map((p, idx) => (
-          <li key={idx}>
-            <button
-              onClick={() => setSelectedProject(idx)}
-              style={{
-                fontSize: selectedProject == idx ? '19px' : '',
-                fontWeight: selectedProject == idx ? 'bold' : ''
-              }}
-            >
-              {p.title }
-              {<ChevronDoubleRightIcon className="chevron-right" style={{opacity: selectedProject==idx?1:0}}/>}
-            </button>
-          </li>
+          <button
+            key={p.title + idx}
+            onClick={() => setSelectedProject(idx)}
+            className={selectedProject == idx ? 'selected-project': ''}
+          >
+            {p.title }
+            {<ChevronDoubleRightIcon className="chevron-right" style={{opacity: selectedProject==idx?1:0}}/>}
+          </button>
         ))}
       </ul>
-      <div className="project-details">
-          <ProjectDetails project={projects[selectedProject]} />
-      </div>
+
+      <ProjectDetails project={projects[selectedProject]} />
+
     </div>
   )
 }
@@ -44,7 +42,7 @@ const projects: Project[] = [
       It is a community item sharing / borrowing app with a fun sci-fi theme. 
     </>,
     siteURL: "https://stellar-share-mania-roa-24.pushed.nz/", 
-    imgURL: "https://stellar-share-mania-roa-24.pushed.nz/images/Homepage/TrolleGuy.png",
+    imgURL: "images/stellar-share-screenshot.png",
     githubURL: "https://github.com/tyaan/DA-group-project-stellar-share", 
     tech: [
       "Typescript", 
@@ -68,7 +66,7 @@ const projects: Project[] = [
       I then cleaned the data using Python, transferred the data to R and created a range of data visualisations using the Shiny library. 
     </>,
     siteURL: "https://y9xjge-tyaan-singh.shinyapps.io/analysis-of-director-genders-in-popular-films/", 
-    imgURL: "images/letterboxd-graph.png",
+    imgURL: "images/director-analysis-screenshot.png",
     githubURL: "https://github.com/tyaan/analysis-of-director-genders-in-popular-films", 
     tech: [
       "Python", 
@@ -100,7 +98,7 @@ const projects: Project[] = [
       It is a flag guessing game containing all of the worlds flags (plus some extra obscure ones). 
     </>,
     siteURL: "http://tyaan-roa24-flag-game.devacademy.nz/", 
-    imgURL: "https://www.publicdomainpictures.net/pictures/240000/velka/world-flags.jpg",
+    imgURL: "images/flag-game-screenshot.png",
     githubURL: "https://github.com/tyaan/DA-group-project-flag-game", 
     tech: [
       "Typescript", 
@@ -117,7 +115,7 @@ const projects: Project[] = [
       It is a simple app that pulls information on all pokemon from the publicly available poke API, and displays info on each one. 
     </>,
     siteURL: "http://tyaan-roa24-pokemonlist.devacademy.nz/pokemon/beedrill",
-    imgURL: "https://pluspng.com/img-png/pokemon-logo-png-pokemon-logo-on-gradient-1600.png",
+    imgURL: "images/poke-app-screenshot.png",
     githubURL: "https://github.com/tyaan/DA-project-pokeAPI", 
     tech: [
       "Typescript", 

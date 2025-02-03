@@ -4,25 +4,22 @@
 
 
   --secondary-color: #FF005E;
-  --ternary-color: #E5FF1F;
-  --ternary-highval: #EEFF70;
+  --tertiary-color: #E5FF1F;
+  --tertiary-highval: #EEFF70;
 
   --white-color: #F2F2F2;
   --black-color: #323232;
 }
 
-/* Example usage of color variables */
 
 * {
   font-family: 'Public Sans', sans-serif;
+  line-height: 1.6;
 }
 
 body {
   background-color: var(--white-color);
-  /* color: var(--black-color);  */
   color: black;
-  /* padding: 0; */
-  /* margin: 0; */
 }
 
 .left-align {
@@ -32,8 +29,3 @@ body {
 .right-align {
   text-align: right;
 }
-
-/* .dark {
-  background: var(--black-color);
-  color: white
-} */

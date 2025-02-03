@@ -1,66 +1,67 @@
 import { ReactElement, useState } from "react"
 import "./CV.css"
-import { ChevronDoubleLeftIcon } from "@heroicons/react/24/solid"
 
 function CV() {
   const [selectedSkill, setSelectedSkill] = useState<number>(0)
 
   return (
-    <div className="cv-container">
-      <div className="cv-about">
-        <h1 className="cv-section-title">Get to know me!</h1>
-        <p>
-        I am a very analytical person with an affinity for math and problem solving. 
-        I love all things music, and have been a musician from a young age. 
-        </p>
-        <p>
-          I completed a BSc in Electronics Engineering in 2017, briefly worked as an electronics engineering assistant and then returned to my passion for music, working as a performing and recording instrumentalist, soundtrack writer, producer, and audio engineer. 
-        </p>
-        <p>
-          In 2023, I picked up some freelance data analyst work (mostly creating royalties reports for musicians). 
-          I developed some basic Python skills through this work and moved on to working as a data annotator for a US based company, Data Annotation. 
-          This work involves rating and correcting AI chatbots on a range of data science and math topics including Python programming, which has really helped develop my coding skills. 
-        </p>
-        <p>
-          In August 2024, I studied full stack web development at Dev Academy Aotearoa. This course provided invaluable opportunities for group and pair coding work, with a focus on Javascript/Typescript and the React framework.
-        </p>
-        
-        <div className="cv-download-button">
-          <a href="Tyaan Tech CV Dec 2024.pdf" download="Tyaan Tech CV Dec 2024.pdf">
-            <button>Download Full CV</ button>
-          </a>
-        </div>
-       
+    <div className="about-container">
+
+      <div className="about-title">
+        ABOUT ME
       </div>
 
-      <div className="cv-skills">
+      <div className="blue-line" />
 
-        <h1 className="cv-section-title">
-          Skills
-        </h1>
+      <div className="cv-container">
 
-        <div className="skill-list">
-          {skills.map((s, idx) => (
-            <button
-              key={s.title + idx}
-              onClick={() => setSelectedSkill(idx)}
-              className={selectedSkill == idx ? 'selected-button' : ''}
-            >
-              {s.title}
-            </button>
-          ))}
-        </div>
-          
-
-        <div className="skill-details">
+        <div className="cv-about">
+          <h1>Get to know me!</h1>
           <p>
-          {skills[selectedSkill].details}
+          I'm a problem solver with a creative edge, combining a strong analytical background with a passion for technology and music. After completing a BSc in Electronics Engineering, I spent several years in the music industry as a performer, producer, and audio engineer, before rediscovering my love for tech through freelance data analysis and AI data annotation work.
+          </p>
+          <p>
+            Now, as a full-stack web developer, I bring a unique perspective to coding, blending technical precision with creativity. I'm especially excited about building user-friendly web applications using JavaScript/TypeScript and the React framework, and I love collaborating on projects that solve real-world problems.
+          </p>
+          <p>
+            Currently, I'm focused on sharpening my development skills and tackling innovative projects that challenge me to grow.
           </p>
         </div>
-        
+
+        <div className="cv-skills">
+
+          <h1>Skills</h1>
+
+          <div className="skill-list">
+            {skills.map((s, idx) => (
+              <button
+                key={s.title + idx}
+                onClick={() => setSelectedSkill(idx)}
+                className={selectedSkill == idx ? 'selected-button' : ''}
+              >
+                {s.title}
+              </button>
+            ))}
+          </div>
+            
+
+          <div className="skill-details">
+            <p>
+            {skills[selectedSkill].details}
+            </p>
+          </div>
+          
+        </div>
+      
       </div>
-     
+      
+      <div className="cv-download-button">
+        <a href="Tyaan Tech CV Dec 2024.pdf" download="Tyaan Tech CV Dec 2024.pdf">
+          <button>Download Full CV</ button>
+        </a>
+      </div>
     </div>
+    
   )
 }
 
