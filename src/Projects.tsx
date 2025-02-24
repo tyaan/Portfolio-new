@@ -34,6 +34,7 @@ function Projects(){
 
       <div className="project-buttons-container">
 
+        {((projects[selectedProject].title != "Free-Tix") && (projects[selectedProject].title != "Portfolio Site")) &&
         <div className="project-button">
           <a
             href={projects[selectedProject].siteURL}
@@ -43,6 +44,9 @@ function Projects(){
             <button >Visit Deployed Site</button>
           </a>
         </div>
+        }
+
+        
         
         <div className="project-button">
           <a
@@ -61,6 +65,43 @@ function Projects(){
 }
 
 const projects: Project[] = [
+  {
+    title: "Free-Tix", 
+    overview: "Event ticketing website", 
+    details: <>
+      This app is still in development. At the time of writing this (24/02/25), I have finished the majority of the main front end functionality for creating and listing events, and am finishing up the backend. 
+      <br />
+      The next stage will be to learn how to implement emailing out tickets, and a payment system. 
+      <br />
+      <br />
+      The motivation for this site came about from a desire to avoid the high booking fees on all currently available ticketing sites. The goal is to have a full functionality ticketing site I can use for my own events, taking inspiration from sites like Humanitix. 
+      <br />
+      <br />
+      I decided to use Python Django for the first time for the backend of this site, as I wanted to expand my Python skills beyond data analysis. 
+    </>,
+    siteURL: "", 
+    imgURL: "images/freetix-screenshot.png",
+    githubURL: "https://github.com/tyaan/free-tix", 
+    tech: [
+      "Typescript", 
+      "React", 
+      "Python Django"
+    ]
+  },
+  {
+    title: "Portfolio Site", 
+    overview: "The website you are currently on!", 
+    details: <>
+      This app is somewhat self explanatory, you're looking at it right now :)
+    </>,
+    siteURL: "", 
+    imgURL: "images/portfolio-screenshot.png",
+    githubURL: "https://github.com/tyaan/Portfolio-new", 
+    tech: [
+      "Typescript", 
+      "React"
+    ]
+  },
   {
     title: "Stellar Share", 
     overview: "Community sharing app with a sci-fi theme", 
@@ -114,7 +155,7 @@ const projects: Project[] = [
       <br />
       It is a flag guessing game containing all of the worlds flags (plus some extra obscure ones). 
     </>,
-    siteURL: "http://tyaan-roa24-flag-game.devacademy.nz/", 
+    siteURL: "https://dev-academy-flag-guessing-game.netlify.app/", 
     imgURL: "images/flag-game-screenshot.png",
     githubURL: "https://github.com/tyaan/DA-group-project-flag-game", 
     tech: [
@@ -131,7 +172,7 @@ const projects: Project[] = [
       <br />
       It is a simple app that pulls information on all pokemon from the publicly available poke API, and displays info on each one. 
     </>,
-    siteURL: "http://tyaan-roa24-pokemonlist.devacademy.nz/pokemon/beedrill",
+    siteURL: "https://dev-academy-poke-api-app.netlify.app",
     imgURL: "images/poke-app-screenshot.png",
     githubURL: "https://github.com/tyaan/DA-project-pokeAPI", 
     tech: [
