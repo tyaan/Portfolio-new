@@ -74,13 +74,11 @@ interface Skill {
 
 const skills: Skill[] = [
   {
-    title: "Python",
+    title: "React",
     details: <>
-    I've been using Python in my work at Data Annotation, where I rate and correct AI chatbots on data analysis and machine learning tasks. 
+    I first learned React through my studies at Dev Academy Aotearoa in 2024. 
     <br /><br />
-    I have also used Python to clean data for some freelance data reporting work. 
-    <br /><br />
-    Recently, I also started learning the Python Django framework for backend web development.
+    I have continued to study React, and used it for all of my front-end web development. 
     </>
   },
   {
@@ -89,6 +87,16 @@ const skills: Skill[] = [
     I learned JavaScript and TypeScript as part of my education at Dev Academy Aotearoa. 
     <br /><br />
     I have experience building full-stack websites with React, Node.js, and Express.js.
+    </>
+  },
+  {
+    title: "Python",
+    details: <>
+    I've been using Python in my work at Data Annotation, where I rate and correct AI chatbots on data analysis and machine learning tasks. 
+    <br /><br />
+    I have also used Python to clean data for some freelance data reporting work. 
+    <br /><br />
+    I have also been learning the Python Django framework for backend web development.
     </>
   },
   {
