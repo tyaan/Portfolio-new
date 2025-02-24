@@ -56,7 +56,7 @@ function CV() {
       </div>
       
       <div className="cv-download-button">
-        <a href="Tyaan Tech CV Dec 2024.pdf" download="Tyaan Tech CV Dec 2024.pdf">
+        <a href="Tyaan Singh Tech CV Feb 25.pdf" download="Tyaan Singh Tech CV Feb 25.pdf">
           <button>Download Full CV</ button>
         </a>
       </div>
